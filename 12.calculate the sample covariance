@@ -1,0 +1,22 @@
+# Define the data
+preferences <- data.frame(
+  A = c(18, 2, 20),
+  B = c(22, 28, 10),
+  C = c(20, 40, 40)
+)
+
+# 1. Calculate the sample covariance between B and C
+cov_B_C <- cov(preferences$B, preferences$C)
+cov_B_C
+
+# 2. Calculate the sample covariance matrix for all preferences
+cov_matrix <- cov(preferences)
+cov_matrix
+
+# 3. Calculate the sample correlation between B and C
+cor_B_C <- cor(preferences$B, preferences$C)
+cor_B_C
+
+# 4. Calculate the sample correlation matrix for all preferences
+cor_matrix <- cor(preferences)
+cor_matrix
