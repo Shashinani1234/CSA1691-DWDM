@@ -1,0 +1,26 @@
+# Given values
+min_val <- 50000
+max_val <- 100000
+v <- 80000
+
+# Min-max normalization for v
+v_normalized <- (v - min_val) / (max_val - min_val)
+v_normalized
+# Define the data
+data <- c(200, 300, 400, 600, 1000)
+
+# a) Min-Max Normalization
+min_val_data <- min(data)
+max_val_data <- max(data)
+min_max_normalized <- (data - min_val_data) / (max_val_data - min_val_data)
+
+# b) Z-Score Normalization
+mean_data <- mean(data)
+sd_data <- sd(data)
+z_score_normalized <- (data - mean_data) / sd_data
+
+# Output the results
+list(
+  min_max_normalized = min_max_normalized,
+  z_score_normalized = z_score_normalized
+)
